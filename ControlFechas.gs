@@ -37,3 +37,8 @@ function controlDate() {
     Logger.log("La fecha en el formato OSI 8601 es: "+formatoFecha);
   }
 }
+
+
+function EstandarizarFechas() {
+  
+}
