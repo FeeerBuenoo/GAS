@@ -5,6 +5,7 @@ function controlDate() {
   var bloque = hoja.getRange(7,7).getValue();
   */
   
+  //Definimos las variables para recoger tanto la información del tipo de fecha y la fecha concreta.
   var proyecto = SpreadsheetApp.getActive().getSheetByName("Formulario");
   var tipo = proyecto.getRange(7, 6).getValue();
   var fecha = proyecto.getRange(7, 7).getValue();
@@ -29,6 +30,7 @@ function controlDate() {
   }
   */
   
+  //Controlamos que el tipo de fecha sea correcto y convertimos la fecha al formato internacional.
   if(tipo == "Japonés" || tipo == "Europeo" || tipo == "Estadounidense") {
     var formatoFecha = Utilities.formatDate(new Date(fecha), "GMT+2", "yyyy/MM/dd");
     proyecto.getRange(12, 7).setValue(formatoFecha);
